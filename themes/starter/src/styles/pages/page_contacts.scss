@@ -1,0 +1,136 @@
+.contacts {
+    @include pt(40, 50);
+    @include pb(100, 300);
+    background-image: url(../img/account/account__bg.svg);
+    background-repeat: repeat;
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 991.98px){
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    .contacts__links {
+        max-width: 312px;
+        width: 100%;
+        @media (max-width: 991.98px){
+            max-width: unset;
+        }
+        h2{
+            @include mb(24,72);
+        }
+    }
+
+    .contacts__item {
+        @include mb(20,40);
+        h3{
+            font-weight: 600;
+            @include adaptiv-font(23,17);
+            color: var(--h4);
+            margin-bottom: 16px;
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+
+    .contacts__item-str {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        img{
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+        }
+        a{
+            font-family: var(--second-family);
+            @include adaptiv-font(17,15);
+            color: var(--main-text);
+        }
+    }
+
+    .feedback {
+        @include width(759,1296);
+        padding: 40px 72px 48px;
+        background: var(--cards-bg);
+        border: 0.93px solid #171824;
+        border-radius: 24px;
+        height: fit-content;
+        @media (max-width: 991.98px){
+            width: 100%;
+        }
+        @media (max-width: 767.98px){
+            padding: 40px 30px 40px;
+        }
+    }
+
+    .form__content {
+        transition: .3s ease-in-out;
+        
+        &._active{
+            animation: removeForm 0.75s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+    }
+
+    .contacts__block {
+        margin-bottom: 16px;
+        p{
+            margin-bottom: 5px;
+        }
+        input,textarea{
+            border: 1px solid #323341;
+            border-radius: 8px;
+            padding: 12px 16px 14px 16px;
+            width: 100%;
+            outline: none;
+            background: transparent;
+            font-family: var(--second-family);
+            font-weight: 600;
+            @include adaptiv-font(17,16);
+            color: var(--h4);
+            &:focus{
+                outline: none;
+            }
+        }
+        textarea{
+            @include mb(24,40);
+            height: 122px;
+            resize: none;
+        }
+    }
+
+    .btn-common {
+        margin-left: auto;
+        cursor: pointer;
+    }
+    #successMessage{
+        font-family: var(--second-family);
+            font-weight: 600;
+            @include adaptiv-font(17,16);
+            color: var(--h4);
+    }
+}
+
+
+@keyframes removeForm {
+    0% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        max-height: 0;
+        overflow: hidden;
+    }
+}

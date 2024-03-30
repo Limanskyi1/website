@@ -1,0 +1,46 @@
+.btn-common{
+    flex-shrink: 0;
+    border-radius: 10px;
+    padding: 13px 20px 13px 20px;
+    max-width: 200px;
+    width: 100%;
+    background: var(--primary-velvet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--third-family);
+    font-weight: 500;
+    @include adaptiv-font(22,17);
+    color: var(--primary-button-text);
+    transition: .3s ease-in-out;
+    &:hover{
+        background-color: #5056ad;
+    }
+    &:active{
+        background-color: #4047aa;
+    }
+    
+}
+
+
+.btn-log{
+    flex-shrink: 0;
+    span{
+        font-family: var(--third-family);
+        font-weight: 500;
+        @include adaptiv-font(22,17);
+        color: var(--primary-button-text);
+        transition: .3s ease-in-out;
+    }
+    &:hover{
+        span{
+            color: var(--primary-velvet);
+        }
+    }
+
+    &:active{
+        color: rgba(94, 106, 138, 0.2);
+    }
+}
+
+

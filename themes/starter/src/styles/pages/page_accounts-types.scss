@@ -1,0 +1,91 @@
+.types {
+    @include pt(40,72);
+    background-image: url(../img/account/account__bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include pb(90,300);
+    .wrap {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 24px;
+        @media (max-width: 1199.98px){
+            grid-template-columns: repeat(2,0.4fr);
+            justify-content: center;
+        }
+        @media (max-width: 991.98px){
+            grid-template-columns: repeat(2,0.5fr);
+        }
+        @media (max-width: 767.98px){
+            grid-template-columns: 0.8fr;
+        }
+        @media (max-width: 414px){
+            grid-template-columns: 1fr;
+        }
+    }
+    .types__item {
+        padding: 32px 42px 44px;
+        border-radius: 16px;
+        border-image: url(../img/account/border.svg) 0 0 fill;
+        @media (max-width: 1399.98px){
+            padding: 30px 25px;
+        }
+        &._active {
+            animation: 1s fadeInTop ease-in-out forwards;
+        }
+        &:nth-of-type(2){
+            animation-delay: 0.2s;
+        }
+        &:nth-of-type(3){
+            animation-delay: 0.4s;
+        }
+        &:last-of-type{
+            animation-delay: 0.6s;
+        }
+    }
+    .types__item-lable {
+        font-family: var(--third-family);
+        font-weight: 500;
+        @include adaptiv-font(28,23);
+        text-align: center;
+        color: var(--h3);
+        @include mb(24,32);
+    }
+    .types__item-price {
+        text-align: center;
+        display: block;
+        font-family: var(--third-family);
+        font-weight: 500;
+        text-align: center;
+        color: var(--h2);
+        @include mb(24,32);
+        @include adaptiv-font(56,28);
+    }
+    .types__item-str {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        &:last-of-type{
+            @include mb(24,32);
+        }
+        p{
+            line-height: unset;
+        }
+        img{
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+        span{
+            font-family: var(--second-family);
+            @include adaptiv-font(17,15);
+            color: var(--primary-velvet);
+        }
+    }
+    .btn-common {
+        margin: 0 auto;
+        max-width: unset;
+    }
+
+
+}

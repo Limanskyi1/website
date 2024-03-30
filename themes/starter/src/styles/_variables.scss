@@ -1,0 +1,99 @@
+@import "typography/_animate_keyframes.scss";
+
+body{ 
+  background: var(--background-color);
+} 
+
+section{
+  overflow: hidden;
+}
+.content{
+  margin-top: 112px; 
+  @media (max-width: 575.98px){
+    margin-top: 103px;
+  }
+}
+html{
+  scroll-behavior: smooth;
+}
+:root {
+  --main-text: #a0a6b6;
+	--primary-velvet: #5a63d3;
+	--h1: #dde3ed;
+	--primary-button-text: #f8faff;
+	--menu-button-text: #b2b6bf;
+	--secondary-text: #8f98ae;
+	--stroke: #1f2432;
+	--cards-bg: #12131e;
+	--icon-bg: #202342;
+	--h2: #d2dae6;
+	--h3: #bdc7d7;
+	--h4: #b7c2d3;
+
+  --second-family: "Open Sans", sans-serif;
+  --third-family: "Outfit", sans-serif;
+}
+
+
+// ==============================================================
+html{
+  ::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+
+// Container size  ========================================================
+  .container,
+  .container-fluid,
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 576px) {
+    .container-sm, .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container-md, .container-sm, .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container-lg, .container-md, .container-sm, .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1320px;
+    }
+  }
+
+

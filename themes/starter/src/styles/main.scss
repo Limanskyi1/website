@@ -1,0 +1,26 @@
+
+// common
+@import 'variables';
+@import 'reset';
+@import 'normalize';
+@import 'mixins';
+
+// typography
+@import 'typography/typography';
+@import 'typography/btns';
+
+// part-templates
+@import 'parts/header';
+@import 'parts/footer';
+@import 'parts/part_subheader.scss';
+@import 'parts/part_menu';
+@import 'parts/part_scroller_top';
+@import 'parts/part_opportunity';
+
+// pages-template
+@import 'pages/page_home';
+@import 'pages/page_about-us';
+@import 'pages/page_accounts-types';
+@import 'pages/page_contacts';
+@import 'pages/page_docs';
+@import 'pages/page_not-found';
